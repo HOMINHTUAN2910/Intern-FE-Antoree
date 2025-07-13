@@ -1,1 +1,46 @@
-{}
+{
+  "product": [
+    {
+      "id": 1,
+      "name": "Tai nghe không dây",
+      "description": "Chất lượng âm thanh tuyệt vời, thời lượng pin 12h.",
+      "price": 1290000,
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 2,
+      "name": "Tai nghe không dây",
+      "description": "Chất lượng âm thanh tuyệt vời, thời lượng pin 12h.",
+      "price": 1290000,
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 3,
+      "name": "Tai nghe không dây",
+      "description": "Chất lượng âm thanh tuyệt vời, thời lượng pin 12h.",
+      "price": 1290000,
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 4,
+      "name": "Tai nghe không dây",
+      "description": "Chất lượng âm thanh tuyệt vời, thời lượng pin 12h.",
+      "price": 1290000,
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 5,
+      "name": "Tai nghe không dây",
+      "description": "Chất lượng âm thanh tuyệt vời, thời lượng pin 12h.",
+      "price": 1290000,
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 6,
+      "name": "Tai nghe không dây",
+      "description": "Chất lượng âm thanh tuyệt vời, thời lượng pin 12h.",
+      "price": 1290000,
+      "image": "https://via.placeholder.com/150"
+    }
+  ]
+}

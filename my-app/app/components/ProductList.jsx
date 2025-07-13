@@ -57,7 +57,7 @@ export default function ProductList() {
               <p className="text-pink-600 font-bold mt-3">
                 {product.price.toLocaleString("vi-VN")}₫
               </p>
-              <button className="mt-auto bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-xl transition-all">
+              <button className="mt-auto bg-[#00df9a] hover:bg-green-700 text-white py-2 rounded-xl transition-all cursor-pointer">
                 Thêm vào giỏ hàng
               </button>
             </div>

@@ -18,12 +18,10 @@ export default function ProductModal({ product, onClose }) {
           exit={{ y: 50, opacity: 0 }}
           transition={{ duration: 0.3 }}
         >
-          <button
+          <IoClose
             onClick={onClose}
-            className="absolute top-2 right-2 text-gray-600 hover:text-black text-xl font-bold"
-          >
-            <IoClose />
-          </button>
+            className="absolute top-2 right-2 text-gray-600 hover:text-black text-xl font-bold cursor-pointer"
+          />
           <img
             src={product.image}
             alt={product.name}
@@ -37,7 +35,7 @@ export default function ProductModal({ product, onClose }) {
             {product.price.toLocaleString("vi-VN")}₫
           </p>
           <button className="mt-4 w-full bg-[#00df9a] hover:bg-green-700 text-white py-2 rounded-xl transition-all cursor-pointer">
-            Thêm vào giỏ hàng
+            Course details
           </button>
         </motion.div>
       </motion.div>

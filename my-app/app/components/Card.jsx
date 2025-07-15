@@ -9,9 +9,9 @@ export default function Card() {
             alt="/"
           />
           <h2 className="text-2xl font-bold text-center py-8">Single User</h2>
-          <p className="text-center text-4xl font-bold">$149</p>
+          <p className="text-center text-4xl font-bold">$79</p>
           <div className="text-center font-medium">
-            <p className="py-2 border-b mx-8 mt-8">500 GB Storage</p>
+            <p className="py-2 border-b mx-8 mt-8">100 GB Storage</p>
             <p className="py-2 border-b mx-8">1 Granted User</p>
             <p className="py-2 border-b mx-8">Send up to 2 GB</p>
           </div>
@@ -25,8 +25,8 @@ export default function Card() {
             src="images/double.png"
             alt="/"
           />
-          <h2 className="text-2xl font-bold text-center py-8">Single User</h2>
-          <p className="text-center text-4xl font-bold">$149</p>
+          <h2 className="text-2xl font-bold text-center py-8">Premium User</h2>
+          <p className="text-center text-4xl font-bold">$599</p>
           <div className="text-center font-medium">
             <p className="py-2 border-b mx-8 mt-8">500 GB Storage</p>
             <p className="py-2 border-b mx-8">1 Granted User</p>
@@ -42,10 +42,10 @@ export default function Card() {
             src="images/triple.png"
             alt="/"
           />
-          <h2 className="text-2xl font-bold text-center py-8">Single User</h2>
-          <p className="text-center text-4xl font-bold">$149</p>
+          <h2 className="text-2xl font-bold text-center py-8">Siver User</h2>
+          <p className="text-center text-4xl font-bold">$179</p>
           <div className="text-center font-medium">
-            <p className="py-2 border-b mx-8 mt-8">500 GB Storage</p>
+            <p className="py-2 border-b mx-8 mt-8">200 GB Storage</p>
             <p className="py-2 border-b mx-8">1 Granted User</p>
             <p className="py-2 border-b mx-8">Send up to 2 GB</p>
           </div>

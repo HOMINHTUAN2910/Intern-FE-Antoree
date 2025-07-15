@@ -55,12 +55,12 @@ export default function ProductList() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 bg-white">
       <h1 className="text-3xl font-bold text-center text-gray-800 mb-10">
-        Sản phẩm nổi bật
+        Featured Products
       </h1>
 
       <Slider {...settings}>
         {products.map((product) => (
-          <div key={product.id} className="px-2 cursor-pointer">
+          <div key={product.id} className="px-3 cursor-pointer my-5">
             <div
               onClick={() => setSelectedProduct(product)}
               className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transform hover:scale-[1.03] transition-all duration-300 flex flex-col h-full"
@@ -81,7 +81,7 @@ export default function ProductList() {
                   {product.price.toLocaleString("vi-VN")}₫
                 </p>
                 <button className="mt-auto bg-[#00df9a] hover:bg-green-700 text-white py-2 rounded-xl transition-all cursor-pointer">
-                  Thêm vào giỏ hàng
+                  Course details
                 </button>
               </div>
             </div>

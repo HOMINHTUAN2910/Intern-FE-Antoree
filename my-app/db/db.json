@@ -3,42 +3,42 @@
     {
       "id": 1,
       "name": "IELTS Course 1",
-      "description": "Chất lượng âm thanh tuyệt vời, thời lượng pin 12h.",
+      "description": "Whether you have taken the IELTS test before, you will benefit from completing this course on the writing section of the exam. The lessons in this course will improve your overall skills in writing and prepare you for every type of writing prompt on the test, ",
       "price": 1290000,
       "image": "images/1.jpg"
     },
     {
       "id": 2,
-      "name": "IELTS Course 1",
-      "description": "Chất lượng âm thanh tuyệt vời, thời lượng pin 12h.",
+      "name": "IELTS Course 2",
+      "description": "Whether you have taken the IELTS test before, you will benefit from completing this course on the writing section of the exam. The lessons in this course will improve your overall skills in writing and prepare you for every type of writing prompt on the test, ",
       "price": 1290000,
       "image": "images/2.jpg"
     },
     {
       "id": 3,
-      "name": "IELTS Course 1",
-      "description": "Chất lượng âm thanh tuyệt vời, thời lượng pin 12h.",
+      "name": "IELTS Course 3",
+      "description": "Whether you have taken the IELTS test before, you will benefit from completing this course on the writing section of the exam. The lessons in this course will improve your overall skills in writing and prepare you for every type of writing prompt on the test, ",
       "price": 1290000,
       "image": "images/3.jpg"
     },
     {
       "id": 4,
-      "name": "IELTS Course 1",
-      "description": "Chất lượng âm thanh tuyệt vời, thời lượng pin 12h.",
+      "name": "IELTS Course 4",
+      "description": "Whether you have taken the IELTS test before, you will benefit from completing this course on the writing section of the exam. The lessons in this course will improve your overall skills in writing and prepare you for every type of writing prompt on the test, ",
       "price": 1290000,
       "image": "images/4.jpg"
     },
     {
       "id": 5,
-      "name": "IELTS Course 1",
-      "description": "Chất lượng âm thanh tuyệt vời, thời lượng pin 12h.",
+      "name": "IELTS Course 5",
+      "description": "Whether you have taken the IELTS test before, you will benefit from completing this course on the writing section of the exam. The lessons in this course will improve your overall skills in writing and prepare you for every type of writing prompt on the test, ",
       "price": 1290000,
       "image": "images/1.jpg"
     },
     {
       "id": 6,
-      "name": "IELTS Course 1",
-      "description": "Chất lượng âm thanh tuyệt vời, thời lượng pin 12h.",
+      "name": "IELTS Course 7",
+      "description": "Whether you have taken the IELTS test before, you will benefit from completing this course on the writing section of the exam. The lessons in this course will improve your overall skills in writing and prepare you for every type of writing prompt on the test, ",
       "price": 1290000,
       "image": "images/1.jpg"
     }

@@ -6,6 +6,7 @@ import axios from "axios";
 import Navbar from "../components/Navbar";
 import { FiFilter } from "react-icons/fi";
 import { FaSortAmountDown } from "react-icons/fa";
+import Link from "next/link";
 
 export default function AllProducts() {
   const [products, setProducts] = useState([]);
@@ -105,13 +106,11 @@ export default function AllProducts() {
       <div className="min-h-screen bg-gray-50 py-10 px-4 sm:px-6 lg:px-8 mt-10">
         <div className="max-w-7xl mx-auto">
           <h1 className="text-4xl font-bold text-center text-gray-800 mb-10">
-            Tất cả sản phẩm
+            Courses
           </h1>
 
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-10">
-            {/* Sidebar lọc */}
             <div className="lg:col-span-1 space-y-6">
-              {/* Dropdown Lọc theo giá */}
               <div className="bg-white p-4 rounded-xl shadow-md relative">
                 <button
                   onClick={() => setShowPriceDropdown((prev) => !prev)}
@@ -150,7 +149,6 @@ export default function AllProducts() {
                 </AnimatePresence>
               </div>
 
-              {/* Dropdown Sắp xếp */}
               <div className="bg-white p-4 rounded-xl shadow-md relative">
                 <button
                   onClick={() => setShowSortDropdown((prev) => !prev)}
@@ -191,34 +189,35 @@ export default function AllProducts() {
               </div>
             </div>
 
-            {/* Lưới sản phẩm */}
             <div className="lg:col-span-4 grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
               {filtered.map((product) => (
-                <motion.div
-                  key={product.id}
-                  className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transform transition-all duration-300 flex flex-col"
-                  whileHover={{ scale: 1.03 }}
-                >
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className="w-full h-48 object-cover"
-                  />
-                  <div className="p-4 flex flex-col flex-1">
-                    <h2 className="text-lg font-semibold text-gray-800">
-                      {product.name}
-                    </h2>
-                    <p className="text-sm text-gray-600 mt-1 min-h-[48px]">
-                      {product.description}
-                    </p>
-                    <p className="text-pink-600 font-bold mt-3">
-                      {product.price.toLocaleString("vi-VN")}₫
-                    </p>
-                    <button className="mt-auto bg-[#00df9a] hover:bg-green-700 text-white py-2 rounded-xl transition-all cursor-pointer">
-                      Thêm vào giỏ hàng
-                    </button>
-                  </div>
-                </motion.div>
+                <Link href={`/productDetail/${product.id}`}>
+                  <motion.div
+                    key={product.id}
+                    className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transform transition-all duration-300 flex flex-col"
+                    whileHover={{ scale: 1.03 }}
+                  >
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className="w-full h-48 object-cover"
+                    />
+                    <div className="p-4 flex flex-col flex-1">
+                      <h2 className="text-lg font-semibold text-gray-800">
+                        {product.name}
+                      </h2>
+                      <p className="text-sm text-gray-600 mt-1 min-h-[48px]">
+                        {product.description}
+                      </p>
+                      <p className="text-pink-600 font-bold mt-3">
+                        {product.price.toLocaleString("vi-VN")}₫
+                      </p>
+                      <button className="mt-auto bg-[#00df9a] hover:bg-green-700 text-white py-2 rounded-xl transition-all cursor-pointer">
+                        Course Details
+                      </button>
+                    </div>
+                  </motion.div>
+                </Link>
               ))}
             </div>
           </div>

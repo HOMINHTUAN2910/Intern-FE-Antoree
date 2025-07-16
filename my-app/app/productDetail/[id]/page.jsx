@@ -16,6 +16,7 @@ import axios from "axios";
 
 export default function ProductDetailPage() {
   const [product, setProduct] = useState(null);
+  const [activeTab, setActiveTab] = useState("description");
   useEffect(() => {
     const fetchProduct = async () => {
       try {
@@ -47,18 +48,19 @@ export default function ProductDetailPage() {
       <div className="max-w-6xl mx-auto bg-white p-8 rounded-xl shadow-xl grid grid-cols-1 md:grid-cols-2 gap-10">
         <div className="flex flex-col items-center">
           <img
-            src={product[0].image}
+            src={`../../../${product[0].image}`}
+            // src="../../../"
             alt={product[0].name}
             className="w-full h-[450px] object-cover rounded-xl"
           />
 
-          <div className="mt-6 grid grid-cols-4 gap-3">
+          {/* <div className="mt-6 grid grid-cols-4 gap-3">
             <img
               src={product[0].image}
               className="w-20 h-20 object-cover rounded border hover:border-green-600"
               alt=""
             />
-          </div>
+          </div> */}
         </div>
 
         <div className="flex flex-col justify-between">
@@ -86,11 +88,9 @@ export default function ProductDetailPage() {
             </div>
 
             <div className="mt-4 flex items-center gap-4">
-              <p className="text-gray-400 line-through text-lg">
-                ${product[0].oldPrice ?? 48.0}
-              </p>
+              <p className="text-gray-400 line-through text-lg">100.000d</p>
               <p className="text-green-600 text-2xl font-bold">
-                ${product[0].price}
+                {product[0].price.toLocaleString("vi-VN")}₫
               </p>
               <span className="bg-red-100 text-red-500 text-sm px-3 py-1 rounded-full">
                 64% Off
@@ -98,7 +98,7 @@ export default function ProductDetailPage() {
             </div>
 
             <p className="mt-5 text-gray-600 text-sm leading-relaxed">
-              {product.description ?? "No description provided."}
+              {product[0].description ?? "No description provided."}
             </p>
 
             <div className="mt-6 flex items-center gap-6">
@@ -115,15 +115,13 @@ export default function ProductDetailPage() {
             <div className="mt-6 text-sm text-gray-700 space-y-1">
               <div>
                 <span className="font-medium">Category:</span>{" "}
-                <span className="text-gray-500">
-                  {product.category ?? "Vegetables"}
-                </span>
+                <span className="text-gray-500">IELTS</span>
               </div>
               <div className="flex gap-2 flex-wrap">
                 <span className="font-medium">Tags:</span>
-                <span className="text-gray-500">Healthy</span>
-                <span className="text-gray-500">Green</span>
-                <span className="text-gray-500 underline">Organic</span>
+                <span className="text-gray-500">Fast</span>
+                <span className="text-gray-500">Quick Learn</span>
+                <span className="text-gray-500 underline">Flexiable</span>
               </div>
             </div>
 
@@ -157,6 +155,96 @@ export default function ProductDetailPage() {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="max-w-6xl mx-auto mt-10 bg-white p-6 rounded-xl shadow">
+        <div className="flex gap-6 border-b border-gray-200">
+          <button
+            className={`pb-3 text-sm font-semibold ${
+              activeTab === "description"
+                ? "border-b-2 border-green-600 text-green-600"
+                : "text-gray-500"
+            }`}
+            onClick={() => setActiveTab("description")}
+          >
+            Thông tin sản phẩm
+          </button>
+          <button
+            className={`pb-3 text-sm font-semibold ${
+              activeTab === "reviews"
+                ? "border-b-2 border-green-600 text-green-600"
+                : "text-gray-500"
+            }`}
+            onClick={() => setActiveTab("reviews")}
+          >
+            Đánh giá
+          </button>
+          <button
+            className={`pb-3 text-sm font-semibold ${
+              activeTab === "related"
+                ? "border-b-2 border-green-600 text-green-600"
+                : "text-gray-500"
+            }`}
+            onClick={() => setActiveTab("related")}
+          >
+            Gợi ý sản phẩm
+          </button>
+        </div>
+
+        <div className="mt-6">
+          {activeTab === "description" && (
+            <p className="text-sm text-gray-600 leading-relaxed">
+              {product.description ??
+                "Không có mô tả sản phẩm. Đây là nơi hiển thị chi tiết, thành phần, nguồn gốc hoặc hướng dẫn sử dụng..."}
+            </p>
+          )}
+
+          {activeTab === "reviews" && (
+            <div className="space-y-4">
+              <div className="border p-4 rounded">
+                <p className="text-sm font-semibold text-gray-800">
+                  Nguyễn Văn A
+                </p>
+                <p className="text-xs text-gray-500 mb-1">★★★★★</p>
+                <p className="text-sm text-gray-600">
+                  Sản phẩm rất tốt, rau tươi và đóng gói kỹ lưỡng. Giao hàng
+                  nhanh.
+                </p>
+              </div>
+              <div className="border p-4 rounded">
+                <p className="text-sm font-semibold text-gray-800">
+                  Trần Thị B
+                </p>
+                <p className="text-xs text-gray-500 mb-1">★★★★☆</p>
+                <p className="text-sm text-gray-600">
+                  Hàng đúng mô tả, nhưng hơi ít hơn mong đợi.
+                </p>
+              </div>
+            </div>
+          )}
+
+          {activeTab === "related" && (
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {[1, 2, 3, 4].map((n) => (
+                <div
+                  key={n}
+                  className="border p-3 rounded hover:shadow-lg transition"
+                >
+                  <img
+                    src={product.image}
+                    alt="related"
+                    className="h-40 w-full object-cover rounded"
+                  />
+                  <h3 className="mt-3 text-sm font-semibold text-gray-800">
+                    Sản phẩm {n}
+                  </h3>
+                  <p className="text-sm text-green-600 font-bold">
+                    ${product.price}
+                  </p>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </div>

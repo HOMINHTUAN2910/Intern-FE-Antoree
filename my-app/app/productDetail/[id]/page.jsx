@@ -38,7 +38,7 @@ export default function ProductDetailPage() {
   if (!product) {
     return (
       <div className="min-h-screen flex justify-center items-center">
-        <p>Đang tải sản phẩm...</p>
+        <span className="loader"></span>
       </div>
     );
   }
@@ -49,7 +49,6 @@ export default function ProductDetailPage() {
         <div className="flex flex-col items-center">
           <img
             src={`../../../${product[0].image}`}
-            // src="../../../"
             alt={product[0].name}
             className="w-full h-[450px] object-cover rounded-xl"
           />

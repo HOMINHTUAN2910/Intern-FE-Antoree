@@ -35,7 +35,7 @@ export default function ProductModal({ product, onClose }) {
             {product.price.toLocaleString("vi-VN")}₫
           </p>
           <button className="mt-4 w-full bg-[#00df9a] hover:bg-green-700 text-white py-2 rounded-xl transition-all cursor-pointer">
-            Course details
+            <a href={`productDetail/${product.id}`}>Course details</a>
           </button>
         </motion.div>
       </motion.div>

@@ -81,7 +81,7 @@ export default function ProductList() {
                   {product.price.toLocaleString("vi-VN")}₫
                 </p>
                 <button className="mt-auto bg-[#00df9a] hover:bg-green-700 text-white py-2 rounded-xl transition-all cursor-pointer">
-                  Course details
+                  <a href={`productDetail/${product.id}`}>Course details</a>
                 </button>
               </div>
             </div>

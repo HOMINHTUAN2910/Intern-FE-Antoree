@@ -179,70 +179,25 @@ export default function ProductDetailPage() {
           >
             Đánh giá
           </button>
-          <button
-            className={`pb-3 text-sm font-semibold ${
-              activeTab === "related"
-                ? "border-b-2 border-green-600 text-green-600"
-                : "text-gray-500"
-            }`}
-            onClick={() => setActiveTab("related")}
-          >
-            Gợi ý sản phẩm
-          </button>
         </div>
 
         <div className="mt-6">
           {activeTab === "description" && (
             <p className="text-sm text-gray-600 leading-relaxed">
-              {product.description ??
-                "Không có mô tả sản phẩm. Đây là nơi hiển thị chi tiết, thành phần, nguồn gốc hoặc hướng dẫn sử dụng..."}
+              {product[0].description}
             </p>
           )}
 
           {activeTab === "reviews" && (
             <div className="space-y-4">
               <div className="border p-4 rounded">
-                <p className="text-sm font-semibold text-gray-800">
-                  Nguyễn Văn A
-                </p>
-                <p className="text-xs text-gray-500 mb-1">★★★★★</p>
-                <p className="text-sm text-gray-600">
-                  Sản phẩm rất tốt, rau tươi và đóng gói kỹ lưỡng. Giao hàng
-                  nhanh.
-                </p>
+                <p className="text-sm font-semibold text-gray-800">Helen</p>
+                <p className="text-sm text-gray-600">Good Lesson</p>
               </div>
               <div className="border p-4 rounded">
-                <p className="text-sm font-semibold text-gray-800">
-                  Trần Thị B
-                </p>
-                <p className="text-xs text-gray-500 mb-1">★★★★☆</p>
-                <p className="text-sm text-gray-600">
-                  Hàng đúng mô tả, nhưng hơi ít hơn mong đợi.
-                </p>
+                <p className="text-sm font-semibold text-gray-800">John</p>
+                <p className="text-sm text-gray-600">Good Lesson</p>
               </div>
-            </div>
-          )}
-
-          {activeTab === "related" && (
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {[1, 2, 3, 4].map((n) => (
-                <div
-                  key={n}
-                  className="border p-3 rounded hover:shadow-lg transition"
-                >
-                  <img
-                    src={product.image}
-                    alt="related"
-                    className="h-40 w-full object-cover rounded"
-                  />
-                  <h3 className="mt-3 text-sm font-semibold text-gray-800">
-                    Sản phẩm {n}
-                  </h3>
-                  <p className="text-sm text-green-600 font-bold">
-                    ${product.price}
-                  </p>
-                </div>
-              ))}
             </div>
           )}
         </div>
